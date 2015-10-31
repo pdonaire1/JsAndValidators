@@ -3,8 +3,10 @@ General functions abuout javascript, jquery, etc, that has been done while the w
 
 # Example about how add an method to the API
 This example is for add a type float_comma  using a var like 123456789,123456789 but this change the point by comma
-´´´
-jQuery.validator.addMethod("float_comma", function(value, element) {
+but when you will to recive in the contreller, you have to make a function for change the comma by a point again,
+on the contrary you'll have an error with the data type.
+
+	jQuery.validator.addMethod("float_comma", function(value, element) {
 	            flotantes = /^[0-9]+,+[0-9]+$/;
 	            numeros = /^[0-9]+$/;
 	            if(value.match(numeros) || value.match(flotantes)){
@@ -12,4 +14,4 @@ jQuery.validator.addMethod("float_comma", function(value, element) {
 	            }
 	            return false;
 	        }, "Value should be numeric");
-´´´
+
