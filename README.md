@@ -17,10 +17,8 @@ on the contrary you'll have an error with the data type.
 
 
 # How make a validator about the float number that can't enter characters
-This function also can add point for the thousand
-
-html:
-	 <input id="myinput" type="text" />
+This function also can add point for the thousand.
+See an example in here: http://jsfiddle.net/leonelphm/1tx5qc3d/
 
 javascript:
 
