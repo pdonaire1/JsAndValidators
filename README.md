@@ -39,3 +39,26 @@ javascript:
 	        $(this).val(format.call($(this).val().split('.').join(''),'.',','));
 	    });
 	});
+
+# Simple Pagination
+For make a functionality from a pagination made from other source like [a Simple Pagination](http://flaviusmatis.github.io/simplePagination.js/) you can use this:
+
+	$(function() {
+		$("#simplepagination").pagination({
+		        items: 100,  // total_pages
+		        itemsOnPage: 10,  // per_page,
+		        cssStyle: 'light-theme',
+		});
+		$("#simplepagination").pagination('drawPage', 1); // with this line you will be able to write
+		  						  // in the pagination the page where you are
+	});
+
+For redirect to the page that we need:
+
+	$("#simplepagination").on("click", function(){
+		div = $(".active"); // with this you can get the page where you are
+		page=div[0].textContent;  // get the page's number
+		
+		link = "?page="+page;  // generate the url for the page that you have selected
+		window.location.href = link  // redirect to the other url
+	});
